@@ -18,9 +18,9 @@
 Data Submission
 ===============
 
-If you wish to suggest a dataset be added to the database or have some data that you would like added, please email Raphael (nrhagen@uw.edu).
+If you wish to suggest a dataset be added to the database or have data that you would like added, please email Raphael (nrhagen@uw.edu).
 
-In short the current data submission process is:
+The current data submission process is:
 
 1. Contact us about adding a dataset to CMAP.
 2. Format your data and metadata in the CMAP format.
@@ -45,7 +45,7 @@ Data Template
 Dataset Requirements
 --------------------
 
-To add your dataset to CMAP and make it usable we have a few data and metadata conventions.
+To add your dataset to CMAP, please use the following data and metadata conventions.
 
 .. note:: CMAP is not a data repository and we do not archive and version control datasets. We recommend that once your dataset has been approved for submission to CMAP, you register your dataset at a data repository (i.e. Zenodo, Dryad, Figshare, PANGAEA, etc) and obtain a DOI. We will include your DOI when the data is ingested into CMAP.
 
@@ -56,12 +56,12 @@ To add your dataset to CMAP and make it usable we have a few data and metadata c
 | time | lat | lon | depth {if exists} | <:math:`var_1`> | ... | <:math:`var_n`> |
 +------+-----+-----+-------------------+-----------------+-----+-----------------+
 
-Data in CMAP is indexed on space and time. For data to be able to be co-localized, it must be in this format.
+Data in CMAP is indexed on space and time. To enable data to be co-localized, it must be in this format.
 
 2. Data must have supporting meta-data, ie. data about your data.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For other scientist to find and use your data, we need metadata on the dataset and the variables within the dataset.
+For other scientists to find and use your data, we need metadata and the variables within the dataset.
 
 
 |
@@ -71,8 +71,8 @@ Data Template and File Structure
 
 The CMAP data template consists of three sections: data, dataset metadata and variable metadata. Data is stored in the first sheet and the sheet title is "data". The second sheet stores the dataset meta-data and is called "dataset_meta_data". Meta-data associated with the variables in the dataset are kept in the third sheet, "vars_meta_data".
 
-The current data template is an excel spreadsheet. If submitting data in the multi-sheet format does not work for you the data, dataset_metadata, and vars_metadata .csv's can be submitted individually.
-Note, information from all three sheets is required for a dataset to be added to CMAP.
+The current data template is an excel spreadsheet. If submitting data in the multi-sheet format does not work for you, the data, dataset_metadata, and vars_metadata .csv's can be submitted individually.
+Please note, information from all three sheets is required for a dataset to be added to CMAP.
 If you are submitting a dataset that is too large to be stored in a tabular format, the preferred format is netcdf for the data and tabular data for the metadata.
 
 
