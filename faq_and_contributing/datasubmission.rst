@@ -159,13 +159,13 @@ Second Sheet: "dataset_meta_data"
     - type: string
     - length: <50 chars
     - short, human readable name of your dataset.
-    - examples: BATS Bacteria Production
+    - example: BATS Bacteria Production
 
 2. **dataset_long_name**: descriptive dataset name
     - type: string
     - length: <500 chars
     - Descriptive human readable name of your dataset
-    - examples: Bermuda Atlantic Time-series Study (BATS) Bacteria Production
+    - example: Bermuda Atlantic Time-series Study (BATS) Bacteria Production
 
 3. **dataset_version**: dataset version
     - type: string
@@ -183,12 +183,12 @@ Second Sheet: "dataset_meta_data"
 6. **dataset_source**: name of your lab and/or institution
     - type: string
     - length: <100 chars
-    - examples: Bermuda Institute of Ocean Sciences
+    - example: Bermuda Institute of Ocean Sciences
 
 7. **dataset_distributor**: name of the distributor of the data product (optional: if the dataset source differs from the distributor)
     - type: string
   	- length: <100 chars
-  	- examples: Distributed by NASA PODAAC
+  	- example: Distributed by NASA PODAAC
 
 8. **dataset_acknowledgement**: Any acknowledgement(s) for this dataset
   	- type: string
@@ -234,12 +234,14 @@ Third Sheet: "vars_meta_data"
 1. **var_short_name**: variable short name
     - type: string
     - length: <50 chars
-    - Computer-readable short name. Should not contain any leading numbers, special characters (ex: '&') or spaces. Ex: SST
+    - Computer-readable short name. Should not contain any leading numbers, special characters (ex: '&') or spaces. 
+    - example: SST
 
 2. **var_long_name**: descriptive variable name
     - type: string
     - length: <500 chars
-    - Human readable variable name. Think of this as a common name for the variable. Ex: Sea Surface Temperature
+    - Human readable variable name. Think of this as a common name for the variable. 
+    - example: Sea Surface Temperature
 
 
 3. **var_sensor**: device by which variable is measured
@@ -250,7 +252,8 @@ Third Sheet: "vars_meta_data"
 4. **var_unit**: variable unit
     - type: string
     - length: <50 chars
-    - Prefer symbols to descriptions. Ex: "/" is better than "per"
+    - Prefer symbols to descriptions. 
+    - example: "/" is better than "per"
 
 5. **var_spatial_res**: variable spatial resolution
     - type: string
