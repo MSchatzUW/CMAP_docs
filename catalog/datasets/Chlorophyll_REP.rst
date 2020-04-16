@@ -46,6 +46,7 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/Reprocessed_CHL_8day/Reprocessed_CHL_8day.html"  frameborder = 0 height = '100px' width="100%">></iframe>
 
+..COMMENT: The table is lacking headers on my browser
 
 |
 
