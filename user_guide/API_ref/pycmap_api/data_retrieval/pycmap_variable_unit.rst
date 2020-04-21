@@ -37,6 +37,7 @@ Variable Unit
 
 **Example**
 
+..COMMENT: state what the example does. 
 
 .. code-block:: python
 
@@ -59,6 +60,8 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
   EXEC uspVariableUnit 'tableName', 'varName'
 
 **Example:**
+
+..COMMENT: State what the example does. 
 
 .. code-block:: sql
 
