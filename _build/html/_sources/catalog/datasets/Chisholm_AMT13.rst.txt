@@ -2,8 +2,8 @@
 
 .. _Chisholm_AMT13:
 
-AMT 13 Cruise
-*************
+AMT13 Procholorcoccus and Synechococcus Abundance
+*************************************************
 
 Atlantic Meridional Transect Cruise 13: Prochlorococcus Abundance, Synechococcus Abundance and Metadata
 #######################################################################################################
