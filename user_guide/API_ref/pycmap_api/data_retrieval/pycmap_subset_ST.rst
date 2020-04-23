@@ -29,12 +29,12 @@ Data Subset: Generic Space-Time Cut
         **table: string**
             Table name (each dataset is stored in a table). A full list of table names can be found in :ref:`Catalog`.
         **variable: string**
-            Variable short name which directly corresponds to a field name in the table. A subset of this variable is returned by this method according to the spatio-temporal cut parameters (below). Pass * wild card to retrieve all fields in a table. A full list of variable short names can be found in :ref:`Catalog`.
+            Variable short name, which directly corresponds to a field name in the table. A subset of this variable is returned by this method according to the spatio-temporal cut parameters (below) COMMENT: Not sure what you mean by the previous sentence. Pass * wild card to retrieve all fields in a table (See Example 2 below). A full list of variable short names can be found in :ref:`Catalog`.
         **dt1: string**
             Start date or datetime. This parameter sets the lower bound of the temporal cut.
-            Example values: '2016-05-25' or '2017-12-10 17:25:00'
+            Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **dt2: string**
-            End date or datetime. This parameter sets the upper bound of the temporal cut.
+            End date or datetime. This parameter sets the upper bound of the temporal cut. Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **lat1: float**
             Start latitude [degree N]. This parameter sets the lower bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lat2: float**
@@ -78,12 +78,13 @@ This example retrieves a subset of in-situ salinity measurements by Argo floats.
                 depth2=100
                 )
 
+..COMMENT: In the above Example, I would make all the text and numbers that people input all in red text. It doesn't do that in my browser. 
 
 **Example 2:**
 
 
 Query all variables within the global Mesoscale Eddy dataset (see the wild card at line 10).
-The last few lines of code (lines 21-27) makes a couple of simple visualizations showing the eddy radius distribution.
+The last few lines of code (lines 21-27) make a couple of simple visualizations showing the eddy radius distribution.
 
 .. code-block:: python
 
@@ -115,14 +116,14 @@ The last few lines of code (lines 21-27) makes a couple of simple visualizations
   ax2.yaxis.set_label_position('right')
   _ = ax2.set_ylabel('Eddy Radius (km)')
 
-
+..COMMENT: In the above Example, I would make all the text and numbers that people input all in red text. It doesn't do that in my browser.
 
 
 
 **Example 3:**
 
 This example retrieves a subset of sea surface temperature measured by satellite.
-Notice, depth1 and depth2 values are automatically ignored because this is a surface dataset.
+Note that depth1 and depth2 values are automatically ignored because this is a surface dataset.
 A simple plot is made to visualize the retrieved data.
 
 .. code-block:: python
@@ -165,8 +166,12 @@ A simple plot is made to visualize the retrieved data.
                      )
   plot(df)
 
+
+..COMMENT: In the above Example, I would make all the text and numbers that people input all in red text. It doesn't do that in my browser.
+
 .. figure:: /_static/overview_icons/sql.png
  :scale: 10 %
+
 
 **SQL Statement**
 
@@ -179,6 +184,8 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
   EXEC uspSpaceTime 'tableName', 'variable', 'dt1', 'dt2', 'lat1', 'lat2', 'lon1', 'lon2', 'depth1', 'depth2'
 
 **Example:**
+
+..COMMENT: State what data the example will give you. Looks like it is similar to example 3 above. 
 
 .. code-block:: sql
 
