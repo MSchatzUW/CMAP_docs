@@ -2,7 +2,7 @@
 
 
 
-Cruise Spatio-Tempoal Bounds
+Cruise Spatio-Temporal Bounds
 ============================
 
 
@@ -16,7 +16,7 @@ Cruise Spatio-Tempoal Bounds
 
 
 
-    Returns a dataframe containing the spatio-temporal bounding box accosiated with the specified cruise. Effectively, this method returns a subset of the outputs returend by the cruise_by_name method.
+    Returns a dataframe containing the spatio-temporal bounding box accosiated with the specified cruise. Effectively, this method returns a subset of the outputs returned by the cruise_by_name method.
 
     |
 
