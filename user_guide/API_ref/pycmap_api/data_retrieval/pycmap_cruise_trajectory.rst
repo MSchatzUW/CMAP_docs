@@ -17,6 +17,8 @@ Cruise Trajectory
 
     Returns a dataframe containing the trajectory of the specified cruise.
 
+..COMMENT: Is the trajectory a list of lat and long from underway data? Or lat and long from CTD data? When I read that a trajectory of the cruise will be given, I think of something in a picture form will be given but I know that's not right since a dataframe is returned. It just made me wonder what data is being used to give the trajectory. 
+
     |
 
     :Parameters:
