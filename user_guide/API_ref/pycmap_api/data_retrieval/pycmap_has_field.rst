@@ -17,8 +17,8 @@ If Column Exists
 .. method:: has_field(tableName, varName)
 
 
-    Returns True if the specified column (field) exists in the table
-    Returns False if either table or variable does not exist (also see :ref:`columns`)
+    Returns True if the specified column (field) exists in the table.
+    Returns False if either table or variable does not exist (also see :ref:`columns`).
 
     |
 
@@ -37,6 +37,7 @@ If Column Exists
 
 **Example**
 
+COMMENT: State what the example does. 
 
 .. code-block:: python
 
