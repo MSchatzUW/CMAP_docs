@@ -33,6 +33,7 @@ Dataset Metadata
 
 **Example**
 
+..COMMENT: Add in what the example is such as: Metadata associated with Argo dataset. 
 
 .. code-block:: python
 
