@@ -25,7 +25,7 @@ Variable Long Name
 
     :Parameters:
         **tableName: string**
-            The name of table associated with the dataset. A full list of table names can be found in the :ref:`Catalog`.
+            The name of the table associated with the dataset. A full list of table names can be found in the :ref:`Catalog`.
         **variable: string or list of string**
             Variable short name. A full list of variable short names can be found in the :ref:`Catalog`.
 
@@ -38,6 +38,7 @@ Variable Long Name
 
 **Example**
 
+..COMMENT: state what the example is. 
 
 .. code-block:: python
 
@@ -61,6 +62,8 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
   EXEC uspVariableLongName 'tableName', 'varName'
 
 **Example:**
+
+..COMMENT: State what the example does.
 
 .. code-block:: sql
 
