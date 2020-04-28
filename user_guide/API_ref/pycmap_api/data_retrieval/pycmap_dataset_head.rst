@@ -38,6 +38,8 @@ Dataset Head
 
 **Example**
 
+..COMMMENT: state what the example does. If the code below is suppose to give the top 5 rows too, it doesn't look like it does but I'm not a programmer!
+
 .. code-block:: python
 
   #!pip install pycmap -q     #uncomment to install pycmap, if necessary
