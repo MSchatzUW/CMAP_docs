@@ -16,9 +16,11 @@ Is Gridded Product
 .. method:: is_grid(tableName, varName)
 
 
+
+
+
 Returns True if the specified variable represents a gridded product; otherwise returns False. For instance, model outputs or satellite products in form of structured arrays are considered gridded products, while underway cruise measurements with irregular spatial or temporal resolutions are considered "sparse" products.
-    |
-..COMMENT: The text (Returns True if the specified variable....) above is all in bold when it doesn't need to be. 
+
 
     :Parameters:
         **tableName: string**
@@ -35,7 +37,7 @@ Returns True if the specified variable represents a gridded product; otherwise r
 
 **Example**
 
-..COMMENT: State what the example does. 
+..COMMENT: State what the example does.
 
 .. code-block:: python
 

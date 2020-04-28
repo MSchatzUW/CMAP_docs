@@ -17,7 +17,7 @@ Data Subset: Depth Profile
 .. method:: depth_profile(table, variable, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2)
 
 
-    Returns a subset of data according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). The returned data subset is aggregated by depth: at each depth level the mean and standard deviation of the variable values within the space-time constraints are computed. The sequence of these values construct the depth profile. The resulted depth profile is returned in form of a Pandas dataframe ordered by depth.
+    Returns a subset of data according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). The returned data subset is aggregated by depth: at each depth level the mean and standard deviation of the variable values within the space-time constraints are computed. The sequence of these values construct the depth profile. The resulting depth profile is returned in the form of a Pandas dataframe ordered by depth.
 
     |
 
@@ -26,24 +26,24 @@ Data Subset: Depth Profile
         **table: string**
             Table name (each dataset is stored in a table). A full list of table names can be found in :ref:`Catalog`.
         **variable: string**
-            Variable short name which directly corresponds to a field name in the table. A subset of this variable is returned by this method according to the spatio-temporal cut parameters (below). A full list of variable short names can be found in :ref:`Catalog`.
+            Variable short name, which directly corresponds to a field name in the table. A subset of this variable is returned by this method according to the spatio-temporal cut parameters (below). (COMMENT: I'm not exactly sure what you mean by the previous sentence but I'm guessing you now mean everything entered in dt1, dt2, lat1, etc...) A full list of variable short names can be found in :ref:`Catalog`.
         **dt1: string**
             Start date or datetime. This parameter sets the lower bound of the temporal cut.
-            Example values: '2016-05-25' or '2017-12-10 17:25:00'
+            Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **dt2: string**
-            End date or datetime. This parameter sets the upper bound of the temporal cut.
+            End date or datetime. This parameter sets the upper bound of the temporal cut. Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **lat1: float**
             Start latitude [degree N]. This parameter sets the lower bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lat2: float**
             End latitude [degree N]. This parameter sets the upper bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lon1: float**
-            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **lon2: float**
-            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **depth1: float**
-            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **depth2: float**
-            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
 
 
 
@@ -54,7 +54,7 @@ Data Subset: Depth Profile
 
 **Example 1:**
 
-This example retrieves a depth profile of in-situ chlorophyll concentration measurements by Argo Floats. The last few lines of code (lines 22-25) creates a simple plot showing the chlorophyll depth profile (deep chlorophyll maximum near 100 m).
+This example retrieves a depth profile of in-situ chlorophyll concentration measurements by Argo Floats. The last few lines of code (lines 22-25) (COMMENT: the lines 22-25 do not appear in the example!) create a simple plot showing the chlorophyll depth profile (deep chlorophyll maximum near 100 m).
 
 .. code-block:: python
 
@@ -79,13 +79,13 @@ This example retrieves a depth profile of in-situ chlorophyll concentration meas
                         depth2=1500
                         )
 
-
+..COMMENT: In the above example, all the text and numbers that can be altered need to be in red text. It doesn't appear that way on my browser. 
 
 
 **Example 2:**
 
 
-This example retrieves depth profile of modeled chlorophyll concentration estimated by Pisces, a weekly 0.5° resolution BioGeoChemical model. The last few lines of code (lines 22-25) creates a simple plot showing the chlorophyll depth profile. The deep chlorophyll maximum (DCM) is approximately near ~100 m, closely matching the in-situ observations by ARGO Floats (see the previous example).
+This example retrieves a depth profile of modeled chlorophyll concentration estimated by Pisces, a weekly 0.5° resolution BioGeoChemical model. The last few lines of code (lines 22-25) create a simple plot showing the chlorophyll depth profile. The deep chlorophyll maximum (DCM) is approximately at 100 m, closely matching the in-situ observations by ARGO Floats (see Example 1).
 
 .. code-block:: python
 
@@ -114,6 +114,8 @@ This example retrieves depth profile of modeled chlorophyll concentration estima
   plt.xlabel('Depth [m]')
   plt.ylabel(api.get_var_long_name(table, variable) + api.get_unit(table, variable))
   plt.show()
+
+..COMMENT: In the above example, all the text and numbers that can be altered need to be in red text. It doesn't appear that way on my browser. 
 
 .. figure:: /_static/overview_icons/sql.png
  :scale: 10 %

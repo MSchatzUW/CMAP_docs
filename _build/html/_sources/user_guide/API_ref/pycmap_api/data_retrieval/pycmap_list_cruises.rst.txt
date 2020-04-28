@@ -17,7 +17,8 @@ List of Cruises
 
 
 
-    Returns a dataframe containing the details of all cruise expeditions stored at Simons CMAP database. This method requires no input.
+    Returns a dataframe containing the details (COMMENT: What details? Location, Dates, and ???) of all cruise expeditions stored at Simons CMAP database. This method requires no input.
+
 
 
     |

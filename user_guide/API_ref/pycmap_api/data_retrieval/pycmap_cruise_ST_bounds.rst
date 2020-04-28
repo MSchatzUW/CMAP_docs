@@ -3,7 +3,7 @@
 
 
 Cruise Spatio-Temporal Bounds
-============================
+=============================
 
 
 .. image:: https://colab.research.google.com/assets/colab-badge.svg

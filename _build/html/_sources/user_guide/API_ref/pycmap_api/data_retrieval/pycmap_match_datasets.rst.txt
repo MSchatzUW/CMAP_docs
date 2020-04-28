@@ -36,20 +36,21 @@ Match (colocalize) Datasets
         **sourceVar: string**
             The source variable short name. The target variables are matched (colocalized) with this variable. A full list of variable short names can be found in the :ref:`Catalog`.
         **targetTables: list of string**
-            Table names of the target datasets to be matched with the source data. Notice source dataset can be matched with multiple target datasets. A full list of table names can be found in the :ref:`Catalog`.
+            Table names of the target datasets to be matched with the source data. Note source dataset can be matched with multiple target datasets. A full list of table names can be found in the :ref:`Catalog`.
         **targetVars: list of string**
             Variable short names to be matched with the source variable. A full list of variable short names can be found in the :ref:`Catalog`.
         **dt1: string**
             Start date or datetime. This parameter sets the lower bound of the temporal cut.
-            Example values: '2016-05-25' or '2017-12-10 17:25:00'
+            Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **dt2: string**
             End date or datetime. This parameter sets the upper bound of the temporal cut.
+            Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **lat1: float**
             Start latitude [degree N]. This parameter sets the lower bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lat2: float**
             End latitude [degree N]. This parameter sets the upper bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lon1: float**
-            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **lon2: float**
             End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note latitude ranges from -180° to 180°.
         **depth1: float**
