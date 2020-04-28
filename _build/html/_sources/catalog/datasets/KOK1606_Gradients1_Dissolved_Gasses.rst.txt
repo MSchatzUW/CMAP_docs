@@ -2,8 +2,8 @@
 
 .. _KOK1606_gasses:
 
-Dissolved Gasses for the KOK1606 Cruise
-***************************************
+Cruise KOK1606 Gradients 1 Methane and Nitrous Oxide
+****************************************************
 
 
 

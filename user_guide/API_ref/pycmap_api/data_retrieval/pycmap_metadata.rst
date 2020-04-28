@@ -36,6 +36,7 @@ Metadata
 
 **Example**
 
+..COMMENT: Add a line what the example is, such as: Metadata associated with Argo salinity measurements. 
 
 .. code-block:: python
 

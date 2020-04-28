@@ -23,9 +23,9 @@ Query
 
     ``This is an 'optional' page. If you are not planning and/or not interested in SQL coding, simply ignore this page please!``
 
-    Simons CMAP datasets are hosted in a SQL database and pycmap package provides the user with a number of pre-developed methods to extract and retrieve subsets of the data. The rest of this documentation is dedicated to explore and explain these methods. In addition to the pre-developed methods, we intend to leave the database open to custom scan queries for interested users. This method takes a custom SQL query statement and returns the results in form of a Pandas dataframe. The full list of table names and variable names (fields) can be obtained using the
+    Simons CMAP datasets are hosted in a SQL database and the pycmap package provides the user with a number of pre-developed methods to extract and retrieve subsets of the data. The rest of this documentation is dedicated to explore and explain these methods. In addition to the pre-developed methods, we intend to leave the database open to custom scan queries for interested users. This method takes a custom SQL query statement and returns the results in form of a Pandas dataframe. The full list of table names and variable names (fields) can be obtained using the
     :ref:`getcatalog` method. In fact, one may use this very method to retrieve the table and field names:
-    ``query(‘EXEC uspCatalog’)``. A Dataset is stored in a table and each table field represents a variable. All data tables have the following fields:
+    ``query(‘EXEC uspCatalog’)``. A dataset is stored in a table and each table field represents a variable. All data tables have the following fields:
 
     * [time] [date or datetime] NOT NULL,
     * [lat] [float] NOT NULL,
@@ -37,8 +37,8 @@ Query
 
 
       Tables which represent a climatological dataset, such as 'tblDarwin_Nutrient_Climatology', will not have a 'time' field.
-      Also, if a table represents a surface dataset, such as satellite products, there would be no 'depth' field. 'depth' is a positive number in meters unit;
-      it is zero at the surface growing towards the ocean's floor. 'lat' and 'lon' are in degrees units, ranging from -90° to 90° and -180° to 180°, respectively.
+      Also, if a table represents a surface dataset, such as satellite products, there would be no 'depth' field. 'depth' is a positive number in meters units;
+      it is zero at the surface and increasing towards the ocean floor. 'lat' and 'lon' are in degrees units, ranging from -90° to 90° and -180° to 180°, respectively.
 
 
       Please keep in mind that some of the datasets are massive in size (10s of TB), avoid queries without WHERE clause (``SELECT * FROM TABLENAME``).
@@ -46,13 +46,13 @@ Query
 
 
       Moreover, the database hosts a wide range of predefined stored procedures and functions to streamline nearly all CMAP data services.
-      For instance retrieving the catalog information is achieved using a single call of this procedure: uspCatalog.
+      For instance, retrieving the catalog information is achieved using a single call of this procedure: uspCatalog.
       These predefined procedures can be called using the pycmap package (see Example 3).
       Alternatively, one may use any SQL client to execute these procedures to retrieve and visualize data (examples: `Azure Data Studio`_, or `Plotly Falcon`_).
-      Using the predefined procedures all CMAP data services are centralized at the database layer which dramatically facilitates
+      Using the predefined procedures, all CMAP data services are centralized at the database layer which dramatically facilitates
       the process of developing apps with different programming languages (pycmap, web app, cmap4r, ...).
       Please note that you can improve the current procedures or add new procedures by contributing at the `CMAP database repository`_.
-      Below is a selected list of stored procedures and functions, their arguments will be described in more details subsequently:
+      Below is a selected list of stored procedures and functions, their arguments will be described in more detail subsequently:
 
 
         * uspCatalog

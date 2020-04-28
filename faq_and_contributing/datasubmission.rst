@@ -8,6 +8,15 @@
 ..
 .. _Download Data Template: https://github.com/simonscmap/DBIngest/raw/master/template/datasetTemplate.xlsx
 
+.. _Download SeaFlow Example: https://github.com/simonscmap/DBIngest/raw/master/template/SeaFlow_example.xlsx
+
+.. _Download Gradients 1 Fluormetric Chl Example: https://github.com/simonscmap/DBIngest/raw/master/template/Gradients1-KOK1606-FluorometricChlorophyll_2020-03-03_V1.1_example.xlsx
+
+.. _Download Gradients 1 Cobalamin Example: https://github.com/simonscmap/DBIngest/raw/master/template/KOK1606_Gradients1_Cobalamin_example.xlsx
+
+.. _Download Gradients 3 Underway CTD Example: https://github.com/simonscmap/DBIngest/raw/master/template/KM1906_Gradients3_uwayCTD_example.xlsx
+
+
 
 
 .. |template_download| image:: /_static/overview_icons/spreadsheet.png
@@ -18,7 +27,8 @@
 Data Submission
 ===============
 
-If you wish to suggest a dataset be added to the database or have data that you would like added, please email Raphael (nrhagen@uw.edu).
+
+If you wish to suggest a dataset be added to the database or have some data that you would like added, please email us (cmap-data-submission@uw.edu).
 
 The current data submission process is:
 
@@ -39,6 +49,19 @@ Data Template
     +=============================+
     | `Download Data Template`_   |
     +-----------------------------+
+
+
+
+Dataset Examples
+----------------
+
+
+
+* `Download SeaFlow Example`_
+* `Download Gradients 1 Fluormetric Chl Example`_
+* `Download Gradients 1 Cobalamin Example`_
+* `Download Gradients 3 Underway CTD Example`_
+
 
 
 
@@ -159,13 +182,13 @@ Second Sheet: "dataset_meta_data"
     - type: string
     - length: <50 chars
     - short, human readable name of your dataset.
-    - examples: BATS Bacteria Production
+    - example: BATS Bacteria Production
 
 2. **dataset_long_name**: descriptive dataset name
     - type: string
     - length: <500 chars
     - Descriptive human readable name of your dataset
-    - examples: Bermuda Atlantic Time-series Study (BATS) Bacteria Production
+    - example: Bermuda Atlantic Time-series Study (BATS) Bacteria Production
 
 3. **dataset_version**: dataset version
     - type: string
@@ -183,35 +206,39 @@ Second Sheet: "dataset_meta_data"
 6. **dataset_source**: name of your lab and/or institution
     - type: string
     - length: <100 chars
-    - examples: Bermuda Institute of Ocean Sciences
+    - example: Bermuda Institute of Ocean Sciences
 
 7. **dataset_distributor**: name of the distributor of the data product (optional: if the dataset source differs from the distributor)
     - type: string
   	- length: <100 chars
-  	- examples: Distributed by NASA PODAAC
+  	- example: Distributed by NASA PODAAC
 
 8. **dataset_acknowledgement**: Any acknowledgement(s) for this dataset
   	- type: string
   	- length: <100 chars
 
-9. **dataset_doi**: digital object identifier (doi) associated with the dataset.
-    - type: string
-    - length: no limit
-
-10. **dataset_history**: notes regarding the evolution of the dataset with respect to the previous versions, if applicable.
+9. **contact_email**: Email address of data submitter. Note: This will be public information in the database.
   	- type: string
   	- length: <100 chars
 
-11. **dataset_description**: A description of your dataset detailing collection and processing methodology.
+10. **dataset_doi**: digital object identifier (doi) associated with the dataset.
+    - type: string
+    - length: no limit
+
+11. **dataset_history**: notes regarding the evolution of the dataset with respect to the previous versions, if applicable.
+  	- type: string
+  	- length: <100 chars
+
+12. **dataset_description**: A description of your dataset detailing collection and processing methodology.
   	- type: string
   	- length: no limit
 
-12. **dataset_references**: links/citations associated with the dataset documentations/publications (enter each ref. in a separate row)
+13. **dataset_references**: links/citations associated with the dataset documentations/publications (enter each ref. in a separate row)
     - type: string
     - length: <500 chars per item
 
 
-13. **climatology**: is the dataset a climatology product? (<null if not climatology, 1 climatology>)
+14. **climatology**: is the dataset a climatology product? (<null if not climatology, 1 climatology>)
   	- type: string
   	- length: <10 chars
 
@@ -234,12 +261,14 @@ Third Sheet: "vars_meta_data"
 1. **var_short_name**: variable short name
     - type: string
     - length: <50 chars
-    - Computer-readable short name. Should not contain any leading numbers, special characters (ex: '&') or spaces. Ex: SST
+    - Computer-readable short name. Should not contain any leading numbers, special characters (ex: '&') or spaces. 
+    - example: SST
 
 2. **var_long_name**: descriptive variable name
     - type: string
     - length: <500 chars
-    - Human readable variable name. Think of this as a common name for the variable. Ex: Sea Surface Temperature
+    - Human readable variable name. Think of this as a common name for the variable. 
+    - example: Sea Surface Temperature
 
 
 3. **var_sensor**: device by which variable is measured
@@ -250,7 +279,8 @@ Third Sheet: "vars_meta_data"
 4. **var_unit**: variable unit
     - type: string
     - length: <50 chars
-    - Prefer symbols to descriptions. Ex: "/" is better than "per"
+    - Prefer symbols to descriptions. 
+    - example: "/" is better than "per"
 
 5. **var_spatial_res**: variable spatial resolution
     - type: string
