@@ -16,7 +16,7 @@ Data Subset: Time Series
 .. method:: time_series(table, variable, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2, interval=None)
 
 
-    Returns a subset of data according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). The returned data subset is aggregated by time: at each time interval the mean and standard deviation of the variable values within the space-time constraints are computed. The sequence of these values construct the timeseries. The timeseries data can be binned weekly, monthly, quarterly, or annually, if the interval parameter is set (this feature is not applicable to climatological datasets). The resulted timeseries is returned in form of a Pandas datframe ordered by time.
+    Returns a subset of data according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). The returned data subset is aggregated by time: at each time interval, the mean and standard deviation of the variable values within the space-time constraints are computed. The sequence of these values construct the timeseries. The timeseries data can be binned weekly, monthly, quarterly, or annually, if the interval parameter is set (this feature is not applicable to climatological datasets). The resulted timeseries is returned in the form of a Pandas dataframe ordered by time.
 
     |
 
@@ -28,21 +28,21 @@ Data Subset: Time Series
             Variable short name which directly corresponds to a field name in the table. A subset of this variable is returned by this method according to the spatio-temporal cut parameters (below). A full list of variable short names can be found in :ref:`Catalog`.
         **dt1: string**
             Start date or datetime. This parameter sets the lower bound of the temporal cut.
-            Example values: '2016-05-25' or '2017-12-10 17:25:00'
+            Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **dt2: string**
-            End date or datetime. This parameter sets the upper bound of the temporal cut.
+            End date or datetime. This parameter sets the upper bound of the temporal cut. Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **lat1: float**
             Start latitude [degree N]. This parameter sets the lower bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lat2: float**
             End latitude [degree N]. This parameter sets the upper bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lon1: float**
-            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **lon2: float**
-            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **depth1: float**
-            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **depth2: float**
-            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **interval: None or string, default: None**
             The timeseries bin size. If None, the native dataset time resolution is used as the bin size. Below is a list of interval values for other binning options:
             -  **'w'** or **'week'** for weekly timeseries.
@@ -80,13 +80,14 @@ This example retrieves the timeseries of SiO4 measurements conducted by HOT team
                  depth2=0
                  )
 
+..COMMENT: In the above example, have all the text and numbers that people can alter in red text. It doesn't appear that way in my browser. 
 
 **Example 2:**
 
 
 This example retrieves a 24-year long timeseries of absolute dynamic topography (closely related to sea surface height) measured by satellite.
-Notice, depth1 and depth2 values are automatically ignored because this is a surface dataset. The 'interval' parameter (line 24) has to 'y' indicating yearly binning (inter-annual timeseres). This example takes a few moments to run as the altimetry dataset is very large (multi-decade daily-global remote sensing).
-The last few lines of code (lines 28-32) makes a simple plot to visualize the retrieved data.
+Note depth1 and depth2 values are automatically ignored because this is a surface dataset. The 'interval' parameter (line 24) has 'y' indicating yearly binning (inter-annual timeseres). This example takes a few moments to run as the altimetry dataset is very large (multi-decade daily-global remote sensing).
+The last few lines of code (lines 28-32) make a simple plot to visualize the retrieved data.
 
 .. code-block:: python
 
@@ -123,6 +124,8 @@ The last few lines of code (lines 28-32) makes a simple plot to visualize the re
   plt.ylabel(api.get_var_long_name(table, variable) + api.get_unit(table, variable))
   plt.show()
 
+
+..COMMENT: In the above example, have all the text and numbers that people can alter in red text. It doesn't appear that way in my browser. 
 
 .. figure:: /_static/overview_icons/sql.png
  :scale: 10 %
