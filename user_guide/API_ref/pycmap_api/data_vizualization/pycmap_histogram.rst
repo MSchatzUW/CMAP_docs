@@ -155,3 +155,6 @@ visualization library (plotly) which may be changed by:
   go[0].width = 600
   go[0].height = 600
   go[0].render()
+
+
+..COMMENT: The modified graph example is not given.
