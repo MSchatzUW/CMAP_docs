@@ -19,7 +19,7 @@ Dataset Metadata
 
 
 
-    Returns a dataframe containing the dataset metadata. (such as a list of all variables, data source, distributor, references, and etc..)
+    Returns a dataframe containing the dataset metadata (such as a list of all variables, data source, distributor, references, and etc.).
 
     |
 
@@ -33,6 +33,7 @@ Dataset Metadata
 
 **Example**
 
+Metadata associated with the Argo dataset.
 
 .. code-block:: python
 
@@ -49,6 +50,8 @@ Dataset Metadata
 
 **SQL Statement**
 
+..COMMENT: I would align the SQL icon and "SQL Statement" side by side. 
+
 Here is how to achieve the same results using a direct SQL statement. Please refer to :ref:`query` for more information.
 
 .. code-block:: sql
@@ -57,7 +60,7 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
 
 **Example:**
 
-Metadata associated with the Argo dataset:
+Metadata associated with the Argo dataset.
 
 .. code-block:: sql
 
