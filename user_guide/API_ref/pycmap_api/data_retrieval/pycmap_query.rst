@@ -54,6 +54,7 @@ Query
       Please note that you can improve the current procedures or add new procedures by contributing at the `CMAP database repository`_.
       Below is a selected list of stored procedures and functions, their arguments will be described in more detail subsequently:
 
+..COMMENT: Where do you describe the arguments below in more detail? 
 
         * uspCatalog
         * uspSpaceTime
