@@ -24,6 +24,7 @@ Cruise Trajectory
           The official cruise name. If applicable, you may also use cruise "nickname" ('Diel', 'Gradients_1' ...).
           A full list of cruise names can be retrieved using cruise method.
 
+..COMMENT: Above, "cruise method" should be a hyperlink but to the "List of Cruises" method I believe. 
 
     :returns: Pandas dataframe.
 
@@ -54,7 +55,7 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
 
   EXEC uspCruiseTrajectoryByName 'Cruise Official Name'
 
-**Example:**
+**Example**
 
 .. code-block:: sql
 
