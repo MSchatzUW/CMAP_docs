@@ -26,7 +26,7 @@ Cruise Details by Name
         **cruiseName: string**
           The official cruise name. If applicable, you may also use cruise "nickname" ('Diel', 'Gradients_1' ...). A full list of cruise names can be retrieved using cruise method.
 
-
+..COMMENT: I believe 'cruise method' should be a hyperlink to the "List of Cruises" methods I'm assuming. 
 
     :returns: Pandas dataframe.
 
