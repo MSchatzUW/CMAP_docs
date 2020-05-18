@@ -56,7 +56,7 @@ Data Subset: Generic Space-Time Cut
 
 **Example 1:**
 
-This example retrieves a subset of in-situ salinity measurements by Argo floats.
+Retrieves a subset of in-situ salinity measurements by Argo floats.
 
 .. code-block:: python
 
@@ -121,7 +121,7 @@ The last few lines of code (lines 21-27) makes a couple of simple visualizations
 
 **Example 3:**
 
-This example retrieves a subset of sea surface temperature measured by satellite.
+Retrieves a subset of sea surface temperature measured by satellite.
 Notice, depth1 and depth2 values are automatically ignored because this is a surface dataset.
 A simple plot is made to visualize the retrieved data.
 
@@ -179,6 +179,8 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
   EXEC uspSpaceTime 'tableName', 'variable', 'dt1', 'dt2', 'lat1', 'lat2', 'lon1', 'lon2', 'depth1', 'depth2'
 
 **Example:**
+
+Retrieves a subset of sea surface temperature measured by satellite.
 
 .. code-block:: sql
 
