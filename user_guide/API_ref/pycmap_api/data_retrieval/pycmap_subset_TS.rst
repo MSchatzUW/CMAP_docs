@@ -16,7 +16,7 @@ Data Subset: Time Series
 .. method:: time_series(table, variable, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2, interval=None)
 
 
-    Returns a subset of data according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). The returned data subset is aggregated by time: at each time interval, the mean and standard deviation of the variable values within the space-time constraints are computed. The sequence of these values construct the timeseries. The timeseries data can be binned weekly, monthly, quarterly, or annually, if the interval parameter is set (this feature is not applicable to climatological datasets). The resulted timeseries is returned in the form of a Pandas dataframe ordered by time.
+    Returns a subset of data according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). The returned data subset is aggregated by time: at each time interval, the mean and standard deviation of the variable values within the space-time constraints are computed. The sequence of these values construct the timeseries. The timeseries data can be binned weekly, monthly, quarterly, or annually, if the interval parameter is set (this feature is not applicable to climatological datasets). The resulting timeseries is returned in the form of a Pandas dataframe ordered by time.
 
 
 
