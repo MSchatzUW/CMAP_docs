@@ -58,7 +58,7 @@ Match (colocalize) Datasets
             End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
 
         **temporalTolerance: list of int**
-            Temporal tolerance values between pairs of source and target datasets. The size and order of values in this list should match those of targetTables. If only a single integer value is given, that would be applied to all target datasets. This parameter is in days except when the target variable represents monthly climatology data in which case it is in months. Notice fractional values are not supported in the current version.
+            Temporal tolerance values between pairs of source and target datasets. The size and order of values in this list should match those of targetTables. If only a single integer value is given, that would be applied to all target datasets. This parameter is in days except when the target variable represents monthly climatology data in which case it is in months. Note fractional values are not supported in the current version.
         **latTolerance: list of float or int**
             Spatial tolerance values in meridional direction [deg] between pairs of source and target datasets. The size and order of values in this list should match those of targetTables. If only a single float value is given, that would be applied to all target datasets. A "safe" value for this parameter can be slightly larger than the half of the target variable's spatial resolution.
         **lonTolerance: list of float or int**
@@ -75,7 +75,7 @@ Match (colocalize) Datasets
 Example 1:
 ----------
 
-In this example, the abundance of a prochlorococcus strain (MIT9313PCR, see lines 5-6) measured by Chisholm lab during the AMT13 cruise (Atlantic Meridional Transect Cruise 13) is colocalized with 3 target variables (lines 7-8):
+The abundance of a prochlorococcus strain (MIT9313PCR, see lines 5-6) measured by Chisholm lab during the AMT13 cruise (Atlantic Meridional Transect Cruise 13) is colocalized with 3 target variables (lines 7-8):
 
 -  'MIT9312PCR_Chisholm' from the same source dataset
 -  'phosphate*WOA*\ clim' from World Ocean Atlas monthly climatology dataset
@@ -149,7 +149,7 @@ The depthTolerance parameter is set to [0, 5, 0] (line 20). This means:
 Example 2:
 ----------
 
-The source variable in this example is particulate pseudo cobalamin ('Me_PseudoCobalamin_Particulate_pM' see lines 5-6) measured by Ingalls lab during the KM1315 cruise. This variable is colocalized with one target variabele, 'picoprokaryote' concentration, from Darwin model (lines 7-8). The colocalized data, then is visualized. please review the above Example 1, since the mentioned tips apply to this example too.
+The source variable is particulate pseudo cobalamin ('Me_PseudoCobalamin_Particulate_pM' see lines 5-6) measured by Ingalls lab during the KM1314 cruise. This variable is colocalized with one target variabele, 'picoprokaryote' concentration, from Darwin model (lines 7-8). The colocalized data is visualized (lines 26-29). Please review Example 1, since the mentioned tips apply to this example too.
 
 |
 
@@ -230,6 +230,8 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
    'depthTolerance'
 
 **Example:**
+
+The source variable is particulate pseudo cobalamin ('Me_PseudoCobalamin_Particulate_pM') measured by Ingalls lab during the KM1314 cruise. This variable is colocalized with one target variabele, 'picoprokaryote' concentration, from Darwin model.
 
 .. code-block:: sql
 
