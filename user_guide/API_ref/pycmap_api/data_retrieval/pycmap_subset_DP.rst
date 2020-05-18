@@ -52,9 +52,9 @@ Data Subset: Depth Profile
 
 |
 
-**Example 1:**
+**Example 1**
 
-This example retrieves a depth profile of in-situ chlorophyll concentration measurements by Argo Floats.
+Retrieves a depth profile of in-situ chlorophyll concentration measurements by Argo Floats.
 
 .. code-block:: python
 
@@ -82,10 +82,9 @@ This example retrieves a depth profile of in-situ chlorophyll concentration meas
 
 
 
-**Example 2:**
+**Example 2**
 
-
-This example retrieves a depth profile of modeled chlorophyll concentration estimated by Pisces, a weekly 0.5° resolution BioGeoChemical model. The last few lines of code (lines 22-25) create a simple plot showing the chlorophyll depth profile. The deep chlorophyll maximum (DCM) is approximately at 100 m, closely matching the in-situ observations by ARGO Floats (see Example 1).
+Retrieves a depth profile of modeled chlorophyll concentration estimated by Pisces, a weekly 0.5° resolution BioGeoChemical model. The last few lines of code (lines 22-25) create a simple plot showing the chlorophyll depth profile. The deep chlorophyll maximum (DCM) is approximately at 100 m, closely matching the in-situ observations by ARGO Floats (see Example 1).
 
 .. code-block:: python
 
@@ -129,6 +128,8 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
   EXEC uspDepthProfile 'tableName', 'variable', 'dt1', 'dt2', 'lat1', 'lat2', 'lon1', 'lon2', 'depth1', 'depth2'
 
 **Example:**
+
+Retrieves a depth profile of modeled chlorophyll concentration estimated by Pisces, a weekly 0.5° resolution BioGeoChemical model.
 
 .. code-block:: sql
 
