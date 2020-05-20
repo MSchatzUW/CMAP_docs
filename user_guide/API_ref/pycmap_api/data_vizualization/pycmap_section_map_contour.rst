@@ -44,6 +44,7 @@ Section Map, Section Contour
     python list. One may use the returned objects to modify the graph
     properties.
 
+..COMMENT: The above hyperlink should direct the user to the API methods page. 
 
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
@@ -60,9 +61,7 @@ Section Map, Section Contour
         **variable: list of string**
             Variable short name which directly corresponds to a field name in the table. A full list of variable short names can be found in :ref:`Catalog`.
         **dt1: string**
-            Start date or datetime. This parameter sets the lower bound of the temporal cut.
-
-            Example values: '2016-05-25' or '2017-12-10 17:25:00'.
+            Start date or datetime. This parameter sets the lower bound of the temporal cut. Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **dt2: string**
             End date or datetime. This parameter sets the upper bound of the temporal cut. Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **lat1: float**
@@ -80,6 +79,7 @@ Section Map, Section Contour
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
 
+..COMMENT: I believe you want the hyperlink above to direct user to the API methods page. 
 
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
@@ -90,9 +90,9 @@ Section Map, Section Contour
 
 
 
-    :returns: list of graph objects
+    :returns: A list of graph objects.
 
-      A list of graph objects. Below are the graph's properties and methods.
+     Below are the graph's properties and methods.
 
       :Properties:
         **data: dataframe**
@@ -101,6 +101,7 @@ Section Map, Section Contour
           Number of contour levels. Only applicable to plotly.
         **cmap: str or cmocean colormap**
           Colormap name. Any matplotlib (e.g. 'viridis', ..) or cmocean (e.g. cmocean.cm.thermal, ..) colormaps can be passed to this property. A full list of matplotlib and cmocean color palettes can be found at the following links:
+          
           https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
 
           https://matplotlib.org/cmocean/
