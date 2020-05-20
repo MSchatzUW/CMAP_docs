@@ -29,6 +29,8 @@ Time Series Plot
     python list. One may use the returned objects to modify the graph
     properties.
 
+..COMMENT: APIs vizEngine appears to be a hyperlink but isn't. To make it a hyperlink I would direct it to the API methods page.
+
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
       API key every time because the API properties are stored locally after
@@ -47,21 +49,24 @@ Time Series Plot
             Start date or datetime. This parameter sets the lower bound of the temporal cut.
             Example values: '2016-05-25' or '2017-12-10 17:25:00'
         **dt2: string**
-            End date or datetime. This parameter sets the upper bound of the temporal cut.
+            End date or datetime. This parameter sets the upper bound of the temporal cut. Example values: '2016-05-25' or '2017-12-10 17:25:00'
         **lat1: float**
             Start latitude [degree N]. This parameter sets the lower bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lat2: float**
             End latitude [degree N]. This parameter sets the upper bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lon1: float**
-            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **lon2: float**
-            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **depth1: float**
-            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **depth2: float**
-            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
+          
+..COMMENT: I think you want the above hyperlink going to the API methods page. 
+
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
@@ -156,7 +161,7 @@ library (plotly) which may be changed by:
 
    <iframe src="../../../../_static/pycmap_tutorial_viz/html/time_series_sss.html"  frameborder = 0  height="420px" width="100%">></iframe>
 
-
+..COMMENT: The label for the x axis isn't visable in the example below like it probably should be. 
 
 .. code-block:: python
 
