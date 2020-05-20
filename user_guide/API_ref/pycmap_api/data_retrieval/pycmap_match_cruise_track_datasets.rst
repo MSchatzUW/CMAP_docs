@@ -1,5 +1,5 @@
 
-.. _seaflow dataset: https://cmap.readthedocs.io/en/latest/catalog/datasets/SeaFlow.html#seaflow
+.. _SeaFlow dataset: https://cmap.readthedocs.io/en/latest/catalog/datasets/SeaFlow.html#seaflow
 .. _Pisces model: https://cmap.readthedocs.io/en/latest/catalog/datasets/Pisces.html#pisces
 .. _dataset page: https://cmap.readthedocs.io/en/latest/catalog/datasets/Pisces.html#pisces
 .. _`Cruises()`: https://cmap.readthedocs.io/en/latest/user_guide/API_ref/pycmap_api/data_retrieval/pycmap_list_cruises.html
@@ -32,7 +32,7 @@ Match (colocalize) Cruise Track with Datasets
         **cruise: string**
             The official cruise name. If applicable, you may also use cruise "nickname" ('Diel', 'Gradients_1' ...). A full list of cruise names can be retrieved using `Cruises()`_ method.
         **targetTables: list of string**
-            Table names of the target datasets to be matched with the source data. Notice source dataset can be matched with multiple target datasets. A full list of table names can be found in the :ref:`Catalog`.
+            Table names of the target datasets to be matched with the source data. Note source dataset can be matched with multiple target datasets. A full list of table names can be found in the :ref:`Catalog`.
         **targetVars: list of string**
             Variable short names to be matched with the source variable. A full list of variable short names can be found in the :ref:`Catalog`.
         **depth1: float**
@@ -41,11 +41,11 @@ Match (colocalize) Cruise Track with Datasets
             End depth [m]. This parameter sets the upper bound of the depth cut on the target datasets. Note depth is a positive number (depth is 0 at the surface and increases towards the ocean floor).
 
         **temporalTolerance: list of int**
-            Temporal tolerance values between the cruise trajectory and target datasets. The size and order of values in this list should match those of targetTables. If only a single integer value is given, that would be applied to all target datasets. This parameter is in days except when the target variable represents monthly climatology data in which case it is in months. Notice fractional values are not supported in the current version.
+            Temporal tolerance values between the cruise trajectory and target datasets. The size and order of values in this list should match those of targetTables. If only a single integer value is given, that would be applied to all target datasets. This parameter is in days except when the target variable represents monthly climatology data in which case it is in months. Note fractional values are not supported in the current version.
         **latTolerance: list of float or int**
-            Spatial tolerance values in meridional direction [deg] between the cruise trajectory and target datasets. The size and order of values in this list should match those of targetTables. If only a single float value is given, that would be applied to all target datasets. A "safe" value for this parameter can be slightly larger than the half of the target variable's spatial resolution.
+            Spatial tolerance values in meridional direction [deg] between the cruise trajectory and target datasets. The size and order of values in this list should match those of targetTables. If only a single float value is given, that would be applied to all target datasets. A "safe" value for this parameter can be slightly larger than half of the target variable's spatial resolution.
         **lonTolerance: list of float or int**
-            Spatial tolerance values in zonal direction [deg] between the cruise trajectory and target datasets. The size and order of values in this list should match those of targetTables. If only a single float value is given, that would be applied to all target datasets. A "safe" value for this parameter can be slightly larger than the half of the target variable's spatial resolution.
+            Spatial tolerance values in zonal direction [deg] between the cruise trajectory and target datasets. The size and order of values in this list should match those of targetTables. If only a single float value is given, that would be applied to all target datasets. A "safe" value for this parameter can be slightly larger than half of the target variable's spatial resolution.
         **depthTolerance: list of float or int**
             Spatial tolerance values in vertical direction [m] between the cruise trajectory and target datasets. The size and order of values in this list should match those of targetTables. If only a single float value is given, that would be applied to all target datasets.
 
@@ -55,16 +55,15 @@ Match (colocalize) Cruise Track with Datasets
 |
 
 
-Example 1:
+Example 1
 ----------
 
 This example demonstrates how to colocalize the "Diel" cruise (official name: KM1513) with 2 target variables (lines 8-9):
 
--  'synecho_abundance' from underway `seaflow dataset`_
+-  'synecho_abundance' from underway `SeaFlow dataset`_
 -  'NO3' from `Pisces model`_
 
 The last few lines of code (lines 21-24), plot the colocalized synecho_abundance versus NO3 concentration.
-|
 
 **Tip1:**
 
@@ -95,7 +94,7 @@ The depthTolerance parameter is set to [5, 5] (line 20). This means:
 -  ±5 meters vertical tolerances when matching with 'NO3'.
 
 Note that the Pisces dataset has several depth levels between surface and 5 m. The spacing
-between the depth levels is not have uniform.
+between the depth levels is not uniform.
 
 
 
@@ -127,12 +126,15 @@ between the depth levels is not have uniform.
   plt.show()
 
 
-Example 2:
+
+Example 2
 ----------
 
 Imagine you would like to colocalize a 'large' number of variables along the track of multiple cruises. Hard-coding the variable names, table names, and tolerance parameters (as shown in Example 1) is an error-prone process. This example show an alternative approach to implement multi-variable colocalization.
 
-Here, we colocalize two open-ocean North-Pacific transect cruises ('KOK1606' [gradient1], 'MGL1704' [gradient2]) with 14 variables from satellite datasets, model outputs, underway cruise measurements, and World-Ocean-Atlas climatology dataset. A full list of variables can be retrieved using the get_catalog() command (COMMENT: Make get_catalog() a hyperlink). Also, please review the tips mentioned Example 1 since they are generally relevant to this example. It takes a few minutes to run this script since we are colocalizing two long cruises with multiple target variables. Reduce the number of cruises (line 12), and/or number of target variables (lines 19-36) to save time.
+Here, we colocalize two open-ocean North-Pacific transect cruises ('KOK1606' [gradient1], 'MGL1704' [gradient2]) with 14 variables from satellite datasets, model outputs, underway cruise measurements, and World-Ocean-Atlas climatology dataset. A full list of variables can be retrieved using the get_catalog() command . Also, please review the tips mentioned Example 1 since they are relevant to this example. It takes a few minutes to run this script since we are colocalizing two long cruises with multiple target variables. Reduce the number of cruises (line 12), and/or number of target variables (lines 19-36) to save time.
+
+..COMMENT: Make get_catalog() a hyperlink in the above paragraph.
 
 As a simple show case, the colocalized synechococcus abundance is plotted against latitude and is compared with phosphaste concentration from World Ocean Atlas monthly climatology dataset (line 91). The full colocalized dataset is stored in a csv file on local machine.
 
@@ -274,6 +276,8 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
     'depthTolerance'
 
 **Example:**
+
+..COMMENT: I might have commented on this before so it may be a repeat! This example does not look like example 1 or 2 above so I would explain what results this example will give you. 
 
 .. code-block:: sql
 
