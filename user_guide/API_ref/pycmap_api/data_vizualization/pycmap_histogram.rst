@@ -26,6 +26,7 @@ Histogram Plot
     Creates a histogram graph for each variable according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). Change the `APIs vizEngine`_ parameter if you wish to use a different visualization library.
     Returns the generated graph objects in form of a python list. One may use the returned objects to modify the graph properties.
 
+..COMMENT: Are you sure the hyperlink above is directing the user to the right page? Doesn't make sense to me why it's directing me to where it is. Do you want it directing the user to the 'API' method page?
 
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
@@ -60,6 +61,8 @@ Histogram Plot
             End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
+
+..COMMENT: Are you sure the hyperlink above is directing the user to the right page? Doesn't make sense to me why it's directing me to where it is. Do you want it directing the user to the 'API' method page?
 
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
@@ -146,7 +149,7 @@ visualization library (plotly) which may be changed by:
 
    <iframe src="../../../../_static/pycmap_tutorial_viz/html/histogram_oxygen_WOA_clim.html"  frameborder = 0  height="420px" width="100%">></iframe>
 
-
+..COMMENT: Maybe I commented on this before but I would add example plots below showing what the lines are doing to change the above plots. 
 
 .. code-block:: python
 
