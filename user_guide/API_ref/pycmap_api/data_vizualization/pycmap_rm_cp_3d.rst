@@ -21,13 +21,15 @@ Regional Map, Contour Plot, 3D Surface Plot
 .. method:: plot_map(tables, variables, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2, exportDataFlag=False, show=True, levels=0, surface3D=False)
 
 
-    Creates map graphs for each variable according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). If the specified space-time domain involves multiple dates and/or depth levels, individual maps are made per date and depth level. To create contour plots, set the contour **levels** parameter to a positive integer number. Also, setting the **surface3D** parameter to True will generate maps in 3D mode. Note that contour and 3D sufrace maps are only supported by plotly visualization library. In the case of sparse dataset, the retrieved data is superimposed on a geospatial map.
+    Creates map graphs for each variable according to the specified space-time constraints (dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2). If the specified space-time domain involves multiple dates and/or depth levels, individual maps are made per date and depth level. To create contour plots, set the contour **levels** parameter to a positive integer number. Also, setting the **surface3D** parameter to True will generate maps in 3D mode. Note that contour and 3D surface maps are only supported by plotly visualization library. In the case of sparse dataset, the retrieved data is superimposed on a geospatial map.
 
 
     Change the `APIs vizEngine`_ parameter if you wish to use a different
     visualization library. Returns the generated graph objects in form of a
     python list. One may use the returned objects to modify the graph
     properties.
+
+..COMMENT: I would have the above hyperlink go to the API methods page. 
 
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
@@ -47,21 +49,24 @@ Regional Map, Contour Plot, 3D Surface Plot
             Start date or datetime. This parameter sets the lower bound of the temporal cut.
             Example values: '2016-05-25' or '2017-12-10 17:25:00'
         **dt2: string**
-            End date or datetime. This parameter sets the upper bound of the temporal cut.
+            End date or datetime. This parameter sets the upper bound of the temporal cut. Example values: '2016-05-25' or '2017-12-10 17:25:00'
         **lat1: float**
             Start latitude [degree N]. This parameter sets the lower bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lat2: float**
             End latitude [degree N]. This parameter sets the upper bound of the meridional cut. Note latitude ranges from -90° to 90°.
         **lon1: float**
-            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            Start longitude [degree E]. This parameter sets the lower bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **lon2: float**
-            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note latitude ranges from -180° to 180°.
+            End longitude [degree E]. This parameter sets the upper bound of the zonal cut. Note longitude ranges from -180° to 180°.
         **depth1: float**
-            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            Start depth [m]. This parameter sets the lower bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **depth2: float**
-            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at surface and grows towards ocean floor).
+            End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
+          
+..COMMENT: I think the hyperlike above should direct the user to the API methods page instead. 
+
         **levels: int, default: 0**
           Number of contour levels. If 0, regional maps are generated (no contour lines). Currently, contour plots are only supported by plotly visualization library.
         **surface3D: boolean, default: False**
@@ -70,8 +75,9 @@ Regional Map, Contour Plot, 3D Surface Plot
 
 
 
-    :returns: list of graph objects
-      A list of graph objects. Below are the graph's properties and methods.
+    :returns: A list of graph objects.
+      
+      Below are the graph's properties and methods.
 
       :Properties:
         **data: dataframe**
@@ -82,8 +88,11 @@ Regional Map, Contour Plot, 3D Surface Plot
           If True, maps are rendered in 3D mode. Only applicable to plotly.
         **cmap: str or cmocean colormap**
           Colormap name. Any matplotlib (e.g. 'viridis', ..) or cmocean (e.g. cmocean.cm.thermal, ..) colormaps can be passed to this property. A full list of matplotlib and cmocean color palettes can be found at the following links:
+          
           https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
+          
           https://matplotlib.org/cmocean/
+          
         **vmin: float**
           This parameter defines the lower bound of the colorbar.
         **vmax: float**
@@ -93,11 +102,11 @@ Regional Map, Contour Plot, 3D Surface Plot
         **width: int**
           Graph's width in pixels.
         **xlabel: str**
-          The graphs's x-axis label.
+          Graphs's x-axis label.
         **ylabel: str**
-          The graphs's y-axis label.
+          Graphs's y-axis label.
         **title: str**
-          The graphs's title.
+          Graphs's title.
 
     :Methods:
       **render()**
@@ -173,6 +182,8 @@ by: ``pycmap.API(vizEngine='bokeh')``
 
 Example 2: Sparse Maps
 ----------------------
+
+..COMMENT: the dataset below should be Global Picophytoplankton. Change the k to a c. If I changed it myself, it looks like it could mess up the hyperlink since the page itself is misspelled too. 
 
 This example visualizes an example of sparse data: synechococcus
 abundance from `Global Pikophytoplankton`_ dataset.
