@@ -37,6 +37,7 @@ Depth Profile
     python list. One may use the returned objects to modify the graph
     properties.
 
+..COMMENT: I think you want the above hyperlink to direct user to the API methods page. 
 
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
@@ -72,6 +73,8 @@ Depth Profile
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
 
+..COMMENT: I think you want the above hyperlink to go to the API methods page instead. 
+
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
@@ -79,9 +82,9 @@ Depth Profile
 
 
 
-    :returns: list of graph objects
+    :returns: A list of graph objects.
 
-      A list of graph objects. Below are the graph's properties and methods.
+      Below are the graph's properties and methods.
 
       :Properties:
         **data: dataframe**
