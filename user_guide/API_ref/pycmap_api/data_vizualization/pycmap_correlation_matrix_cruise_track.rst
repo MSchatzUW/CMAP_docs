@@ -25,14 +25,14 @@ Correlation Matrix Along Cruise Track
 .. method:: plot_cruise_corr_map(cruise, targetTables, targetVars, depth1, depth2, temporalTolerance, latTolerance, lonTolerance, depthTolerance, method='spearman', exportDataFlag=False, show=True)
 
 
-    This function colocalizes the target variables along track of a cruise
+    This function colocalizes the target variables along the track of a cruise
     (see `Match (colocalize) Cruise Track with Datasets`_). It then computes
     and visualizes a correlation matrix showing the pairwise correlation
     coefficients between the colocalized variables. The colocalization
     procedure relies on the tolerance parameters because they set the
     matching boundaries between the cruise track and target datasets. Currently, this graph is only supported by plotly library.
 
-    Returns the generated correlation graph object. One may modify the graph properties (see example below).
+    This function returns the generated correlation graph object. One may modify the graph properties (see example below).
 
 
     .. note::
@@ -75,6 +75,7 @@ Correlation Matrix Along Cruise Track
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
 
+..COMMENT: I think you want the above hyperlink to go to the API methods page instead. 
 
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
@@ -95,6 +96,7 @@ Correlation Matrix Along Cruise Track
           Computed pairwise correlation coefficients.
         **cmap: str or cmocean colormap**
           Colormap name. Any matplotlib (e.g. 'viridis', ..) or cmocean (e.g. cmocean.cm.thermal, ..) colormaps can be passed to this property. A full list of matplotlib and cmocean color palettes can be found at the following links:
+          
           https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
 
           https://matplotlib.org/cmocean/
@@ -122,14 +124,11 @@ Example
 
 This example colocalizes the Gradient 2 cruise (MGL1704) with 12
 variables, including underway measurements of prochlorococcus,
-synechococcus, and picoeukaryote abundances by `SeaFlow dataset`_,
+synechococcus, and picoeukaryote abundances by the `SeaFlow dataset`_,
 satellite products (adt, chl, sst), and model estimates (see the
 ``match_params()`` function below for more details). Please explore the
 `catalog`_ to find more appropriate target variables.
 
-
-Returns the generated correlation graph object. One may
-modify the graph properties (see example below).
 
 Review `Match (colocalize) Cruise Track with Datasets`_, and `Match
 (colocalize) Datasets`_ pages for more details and tips!
