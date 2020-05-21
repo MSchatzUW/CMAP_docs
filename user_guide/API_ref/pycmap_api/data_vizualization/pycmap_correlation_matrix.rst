@@ -36,7 +36,7 @@ Correlation Matrix
 
     This function computes and plots the pair-correlation coefficient
     between the source and target variables. The results are visualized in
-    form of a correlation matrix. To compute the correlations, the source and
+    the form of a correlation matrix. To compute the correlations, the source and
     target variables have to be colocalized first (see :ref:`match`). The colocalization procedure relies on the tolerance
     parameters because they set the matching boundaries between the source
     and target datasets. Note the source has to be a single
@@ -46,7 +46,7 @@ Correlation Matrix
     than half of their corresponding spatial/temporal resolutions. Please
     explore the :ref:`Catalog` to find appropriate target variables. Currently, this visualization is only supported by plotly visualization library.
 
-    Returns the generated correlation graph object. One may modify the graph properties (see example below).
+    This function returns the generated correlation graph object. One may modify the graph properties (see example below).
 
 
     .. note::
@@ -67,12 +67,10 @@ Correlation Matrix
             Table names of the target datasets to be matched with the source data. Note source dataset can be matched with multiple target datasets. A full list of table names can be found in :ref:`Catalog`.
         **dt1: string**
             Start date or datetime. Both source and target datasets are filtered before matching. This parameter sets the lower bound of the temporal cut.
-
             Example values: '2016-05-25' or '2017-12-10 17:25:00'.
-
         **dt2: string**
-            End date or datetime. Both source and target datasets are filtered before matching. This parameter sets the upper bound of the temporal cut.
-
+            End date or datetime. Both source and target datasets are filtered before matching. This parameter sets the upper bound of the temporal cut.   
+            Example values: '2016-05-25' or '2017-12-10 17:25:00'.
         **lat1: float**
             Start latitude [degree N]. Both source and target datasets are filtered before matching. This parameter sets the lower bound of the meridional cut. Note latitude ranges from -90 to 90 degrees.
         **lat2: float**
@@ -103,9 +101,10 @@ Correlation Matrix
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
 
+..COMMENT: I think you want the above hyperlink to direct user to the API methods page. 
 
         **show: boolean, default: True**
-          If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
+          If True, the graph object is returned and displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
 
 
@@ -123,6 +122,7 @@ Correlation Matrix
           Computed pairwise correlation coefficients.
         **cmap: str or cmocean colormap**
           Colormap name. Any matplotlib (e.g. 'viridis', ..) or cmocean (e.g. cmocean.cm.thermal, ..) colormaps can be passed to this property. A full list of matplotlib and cmocean color palettes can be found at the following links:
+          
           https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
 
           https://matplotlib.org/cmocean/
@@ -164,7 +164,7 @@ variables (lines 7-8):
 .. tip::
   The space-time cut parameters (lines 41-48) have been set in such a way
   to encompass the entire source dataset 'tblAMT13_Chisholm' (see the
-  `dataset page`_ for more details). Notice that the last data point at
+  `dataset page`_ for more details). Note that the last data point at
   the source dataset has been measured at '2003-10-12 12:44:00'. For
   simplicity dt2 has been set to '2003-10-13', but you could also use the
   exact date-time '2003-10-12 12:44:00'.
