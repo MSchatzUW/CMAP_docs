@@ -29,8 +29,6 @@ Time Series Plot
     python list. One may use the returned objects to modify the graph
     properties.
 
-..COMMENT: APIs vizEngine appears to be a hyperlink but isn't. To make it a hyperlink I would direct it to the API methods page.
-
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
       API key every time because the API properties are stored locally after
@@ -63,10 +61,7 @@ Time Series Plot
         **depth2: float**
             End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **exportDataFlag: boolean, default: False**
-          If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
-          
-..COMMENT: I think you want the above hyperlink going to the API methods page. 
-
+          If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.     
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
@@ -112,7 +107,7 @@ Time Series Plot
 
 |
 
-**Example:**
+**Example**
 
 
 This example generates two timeseries graphs showing remotly sensed `sea
@@ -161,7 +156,7 @@ library (plotly) which may be changed by:
 
    <iframe src="../../../../_static/pycmap_tutorial_viz/html/time_series_sss.html"  frameborder = 0  height="420px" width="100%">></iframe>
 
-..COMMENT: The label for the x axis isn't visable in the example below like it probably should be. 
+
 
 .. code-block:: python
 
