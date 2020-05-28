@@ -74,9 +74,6 @@ Correlation Matrix Along Cruise Track
 
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
-
-..COMMENT: I think you want the above hyperlink to go to the API methods page instead. 
-
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
