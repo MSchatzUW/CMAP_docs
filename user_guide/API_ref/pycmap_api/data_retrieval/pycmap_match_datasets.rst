@@ -72,7 +72,7 @@ Match (colocalize) Datasets
 |
 
 
-Example 1:
+Example 1
 ----------
 
 The abundance of a prochlorococcus strain (MIT9313PCR, see lines 5-6) measured by Chisholm lab during the AMT13 cruise (Atlantic Meridional Transect Cruise 13) is colocalized with 3 target variables (lines 7-8):
@@ -83,16 +83,16 @@ The abundance of a prochlorococcus strain (MIT9313PCR, see lines 5-6) measured b
 
 |
 
-**Tip1:**
+**Tip1**
 
 The space-time cut parameters (lines 9-16) have been set in such a way to encompass the entire source dataset 'tblAMT13_Chisholm' (see the dataset page for more details). Note that the last data point at the source dataset has been measured at '2003-10-12 12:44:00'. For simplicity dt2 has been set to '2003-10-13', but you could also use the exact date-time '2003-10-12 12:44:00'.
 
-**Tip2:**
+**Tip2**
 
 AMT13 cruise trajectory is already in Simons CMAP database. Therefore, another way to find reasonable values for the space-time cut parameters (lines 9-16) is to use the outputs of the following command:
 api.cruise_bounds('AMT13').
 
-**Tip3:**
+**Tip3**
 
 The temporalTolerance parameter is set to [0, 0, 1] (line 17). This means:
 
@@ -100,7 +100,7 @@ The temporalTolerance parameter is set to [0, 0, 1] (line 17). This means:
 -  ±0 month temporal tolerance when matching with 'phosphate*WOA*\ clim' (this is a monthly climatology dataset)
 -  ±4 day temporal tolerance when matching with 'chl' (this is a weekly averaged dataset)
 
-**Tip4:**
+**Tip4**
 
 The latTolerance and lonTolerance parameters are set to [0, 0.5, 0.25] (lines 18-19). This means:
 
@@ -108,7 +108,7 @@ The latTolerance and lonTolerance parameters are set to [0, 0.5, 0.25] (lines 18
 -  ±0 month temporal tolerance when matching with 'phosphate*WOA*\ clim' (this is a monthly climatology dataset)
 -  ±4 day temporal tolerance when matching with 'chl' (this is a weekly averaged dataset)
 
-**Tip5:**
+**Tip5**
 
 The depthTolerance parameter is set to [0, 5, 0] (line 20). This means:
 
@@ -146,23 +146,23 @@ The depthTolerance parameter is set to [0, 5, 0] (line 20). This means:
 
 
 
-Example 2:
+Example 2
 ----------
 
 The source variable is particulate pseudo cobalamin ('Me_PseudoCobalamin_Particulate_pM' see lines 5-6) measured by Ingalls lab during the KM1314 cruise. This variable is colocalized with one target variabele, 'picoprokaryote' concentration, from Darwin model (lines 7-8). The colocalized data is visualized (lines 26-29). Please review Example 1, since the mentioned tips apply to this example too.
 
 |
 
-**Tip1:**
+**Tip1**
 
 The employed Darwin model outputs are a 3-day averaged dataset, and therefore ±2 day temporal tolerance is used (line 17).
 
-**Tip2:**
+**Tip2**
 
 The employed Darwin model outputs have has a 0.5 degree spatial resolution in zonal and meridional directions, and so ±0.25 degree spatial tolerance is used (line 18-19).
 
 
-**Tip3:**
+**Tip3**
 
 Darwin model first depth level is at 5 m (not 0), and so ±5 meter vertical tolerance should cover all surface measurements (line 20).
 
@@ -229,7 +229,7 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
    'lonTolerance',
    'depthTolerance'
 
-**Example:**
+**Example**
 
 The source variable is particulate pseudo cobalamin ('Me_PseudoCobalamin_Particulate_pM') measured by Ingalls lab during the KM1314 cruise. This variable is colocalized with one target variabele, 'picoprokaryote' concentration, from Darwin model.
 
