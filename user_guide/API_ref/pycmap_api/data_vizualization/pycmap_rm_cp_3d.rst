@@ -29,8 +29,6 @@ Regional Map, Contour Plot, 3D Surface Plot
     python list. One may use the returned objects to modify the graph
     properties.
 
-..COMMENT: I would have the above hyperlink go to the API methods page. 
-
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
       API key every time because the API properties are stored locally after
@@ -64,9 +62,6 @@ Regional Map, Contour Plot, 3D Surface Plot
             End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
-          
-..COMMENT: I think the hyperlike above should direct the user to the API methods page instead. 
-
         **levels: int, default: 0**
           Number of contour levels. If 0, regional maps are generated (no contour lines). Currently, contour plots are only supported by plotly visualization library.
         **surface3D: boolean, default: False**
@@ -182,8 +177,6 @@ by: ``pycmap.API(vizEngine='bokeh')``
 
 Example 2: Sparse Maps
 ----------------------
-
-..COMMENT: the dataset below should be Global Picophytoplankton. Change the k to a c. If I changed it myself, it looks like it could mess up the hyperlink since the page itself is misspelled too. 
 
 This example visualizes an example of sparse data: synechococcus
 abundance from `Global Pikophytoplankton`_ dataset.
