@@ -44,8 +44,6 @@ Section Map, Section Contour
     python list. One may use the returned objects to modify the graph
     properties.
 
-..COMMENT: The above hyperlink should direct the user to the API methods page. 
-
     .. note::
       This method requires a valid `API key`_. It is not necessary to set the
       API key every time because the API properties are stored locally after
@@ -78,9 +76,6 @@ Section Map, Section Contour
             End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
-
-..COMMENT: I believe you want the hyperlink above to direct user to the API methods page. 
-
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
