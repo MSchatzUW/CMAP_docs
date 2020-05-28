@@ -46,5 +46,3 @@ Retrieves the dataset of the table name 'tblKM1906_Gradients3_uway_optics' from 
   api = pycmap.API(token='<YOUR_API_KEY>')
   api.get_dataset('tblKM1906_Gradients3_uway_optics')
 
-
-..COMMENT: Is there suppose to be a SQL statement here next?
