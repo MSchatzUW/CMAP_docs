@@ -100,9 +100,6 @@ Correlation Matrix
 
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
-
-..COMMENT: I think you want the above hyperlink to direct user to the API methods page. 
-
         **show: boolean, default: True**
           If True, the graph object is returned and displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
