@@ -127,7 +127,7 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
 
   EXEC uspDepthProfile 'tableName', 'variable', 'dt1', 'dt2', 'lat1', 'lat2', 'lon1', 'lon2', 'depth1', 'depth2'
 
-**Example:**
+**Example**
 
 Retrieves a depth profile of modeled chlorophyll concentration estimated by Pisces, a weekly 0.5° resolution BioGeoChemical model.
 
