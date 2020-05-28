@@ -65,29 +65,29 @@ This example demonstrates how to colocalize the "Diel" cruise (official name: KM
 
 The last few lines of code (lines 21-24), plot the colocalized synecho_abundance versus NO3 concentration.
 
-**Tip1:**
+**Tip1**
 
 The official name of this cruise is 'KM1513'. One can use the unofficial name, 'diel', instead (line 7).
 
-**Tip2:**
+**Tip2**
 
 A full list of cruise expeditions can be retrieved using the `Cruises()`_ method.
 
-**Tip3:**
+**Tip3**
 
 The temporalTolerance parameter is set to [0, 4] (line 12). This means:
 
 -  ±0 day temporal tolerance when matching with 'synecho_abundance' (exact date-time matching)
 -  ±4 day temporal tolerance when matching with 'NO3' (Pisces is a weekly averaged dataset)
 
-**Tip4:**
+**Tip4**
 
 The latTolerance and lonTolerance parameters are set to [0, 0.25] (lines 13-14). This means:
 
 -  ±0 degree spatial tolerances (in meridional and zonal directions) when matching with 'synecho_abundance' (exact lat/lon matching).
 -  ±0.25 degrees spatial tolerances (in meridional and zonal directions) when matching with 'NO3'. This dataset has 0.25 degree spatial resolution which means one may reduce the spatial tolerance for this target dataset down to 0.25/2 = 0.125 degrees.
 
-**Tip5:**
+**Tip5**
 
 The depthTolerance parameter is set to [5, 5] (line 20). This means:
 -  ±5 meters vertical tolerances when matching with 'synecho_abundance'
@@ -134,13 +134,11 @@ Imagine you would like to colocalize a 'large' number of variables along the tra
 
 Here, we colocalize two open-ocean North-Pacific transect cruises ('KOK1606' [gradient1], 'MGL1704' [gradient2]) with 14 variables from satellite datasets, model outputs, underway cruise measurements, and World-Ocean-Atlas climatology dataset. A full list of variables can be retrieved using the get_catalog() command . Also, please review the tips mentioned Example 1 since they are relevant to this example. It takes a few minutes to run this script since we are colocalizing two long cruises with multiple target variables. Reduce the number of cruises (line 12), and/or number of target variables (lines 19-36) to save time.
 
-..COMMENT: Make get_catalog() a hyperlink in the above paragraph.
-
 As a simple show case, the colocalized synechococcus abundance is plotted against latitude and is compared with phosphaste concentration from World Ocean Atlas monthly climatology dataset (line 91). The full colocalized dataset is stored in a csv file on local machine.
 
 |
 
-**Tip:**
+**Tip**
 
 Once the colocalization is finished, you may add new "calculated"
 columns to the final dataframe:
@@ -275,9 +273,7 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
     'lonTolerance',
     'depthTolerance'
 
-**Example:**
-
-..COMMENT: I might have commented on this before so it may be a repeat! This example does not look like example 1 or 2 above so I would explain what results this example will give you. 
+**Example**
 
 .. code-block:: sql
 
