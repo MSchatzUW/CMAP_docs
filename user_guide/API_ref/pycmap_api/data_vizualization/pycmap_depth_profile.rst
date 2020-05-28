@@ -72,9 +72,6 @@ Depth Profile
             End depth [m]. This parameter sets the upper bound of the vertical cut. Note depth is a positive number (it is 0 at the surface and increases towards the ocean floor).
         **exportDataFlag: boolean, default: False**
           If True, the graph data points are stored on the local machine. The export path and file format are set by the `APIs parameters`_.
-
-..COMMENT: I think you want the above hyperlink to go to the API methods page instead. 
-
         **show: boolean, default: True**
           If True, the graph object is returned and is displayed. The graph file is saved on the local machine at the figureDir directory.
           If False, the graph object is returned but not displayed.
@@ -110,7 +107,7 @@ Depth Profile
 
 |
 
-Example:
+Example
 --------
 
 This example compares the depth profile of chlorophyll concentration
@@ -173,7 +170,7 @@ Here is how to achieve the same results using a direct SQL statement. Please ref
 
   EXEC uspDepthProfile 'tableName', 'variable', 'dt1', 'dt2', 'lat1', 'lat2', 'lon1', 'lon2', 'depth1', 'depth2'
 
-**Example:**
+**Example**
 
 .. code-block:: sql
 
