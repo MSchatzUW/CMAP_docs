@@ -24,8 +24,6 @@ Cruise Variables
         **cruiseName: string**
           The official cruise name. If applicable, you may also use cruise "nickname" ('Diel', 'Gradients_1' ...). A full list of cruise names can be retrieved using cruise method.
 
-..COMMENT: Again, cruise method above should be a hyperlink to the "List of Cruises" method.
-
     :returns: Pandas dataframe.
 
 
